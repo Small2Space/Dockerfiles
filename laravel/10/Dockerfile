@@ -1,6 +1,6 @@
 FROM php:8.1-apache
 MAINTAINER smallru8
-
+# ghcr.io/small2space/laravel:10
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 
 RUN apt-get update -y && apt-get install -y openssl zip unzip git libonig-dev nodejs python3 python3-pip
