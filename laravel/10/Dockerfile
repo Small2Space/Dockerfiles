@@ -17,5 +17,5 @@ RUN composer global require "ecpay/sdk"
 RUN composer global require "laravel/jetstream"
 RUN composer global require "laravel/ui"
 RUN composer global require "sudiptpa/guid"
-RUN composer global require "encore/laravel-admin"
+#RUN composer global require "encore/laravel-admin"
 WORKDIR /var/www/html
