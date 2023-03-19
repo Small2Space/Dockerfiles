@@ -1,0 +1,23 @@
+name: Docker Image CI - laravel-10
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - laravel/10/**
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and publish a Docker image for ${{ github.repository }}
+      uses: macbre/push-to-ghcr@master
+      with:
+          image_name: small2space/laravel
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: ./laravel/10/Dockerfile
+          image_tag: 10
